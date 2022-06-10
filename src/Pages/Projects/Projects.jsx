@@ -1,7 +1,6 @@
 import React from "react";
 import SingleProject from "./SingleProject";
 
-
 const Projects = () => {
   return (
     <div>
@@ -12,9 +11,9 @@ const Projects = () => {
         </h2>
 
         <div className="projectsBox my-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-6 md:gap-10">
-            <SingleProject/>
-            <SingleProject/>
-            <SingleProject/>
+          <SingleProject />
+          <SingleProject />
+          <SingleProject />
         </div>
       </div>
     </div>
