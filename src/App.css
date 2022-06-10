@@ -10,6 +10,8 @@ body{
 .container{
   max-width: 1240px;
   margin: auto;
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 .is-active{
   color: black;

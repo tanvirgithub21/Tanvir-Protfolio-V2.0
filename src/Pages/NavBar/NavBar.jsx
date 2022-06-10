@@ -59,9 +59,9 @@ const NavBar = () => {
             </li>
             <li>
               <NavLink
-                to="/portfolio"
+                to="/projects"
                 className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white">
-                 Portfolio
+                 Projects
               </NavLink>
             </li>
             <li>
