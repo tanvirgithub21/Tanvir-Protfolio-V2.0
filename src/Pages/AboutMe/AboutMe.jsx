@@ -29,35 +29,37 @@ const AboutMe = () => {
               <br />
               <span className=" text-lg md:text-xl text-[#007ced]">Junior web Developer</span>
             </h2>
-            <p className="w-full  sm:max-w-[80%]">
+            <p className="w-full mb-5  sm:max-w-[80%]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
               laudantium voluptatum, quod ipsum repellat dolorum assumenda nisi
               ea eius doloremque inventore nam aut voluptatibus dignissimos
               debitis voluptas accusamus modi doloribus! Ducimus ratione culpa
               quod inventore,.
             </p>
-            <button className="btn btn-primary">Download Resume</button>
+            <a href="Tanvir Ahmed_Resume.pdf" download={"Tanvir Resume"} className="btn btn-primary">Download Resume</a>
             {/* social icon box  */}
             <div className="socialIcon">
               <ul className="flex justify-center sm:justify-start text-2xl text-slate-700">
-                <li className="mr-5 mt-8">
-                  <Link to="#">
+                <li className="mr-5 mt-8 hover:text-slate-500 ease-in-out duration-300">
+                  <a href="https://www.linkedin.com/in/tanvirahmed6174/">
                     <FaLinkedin />
-                  </Link>
+                  </a>
                 </li>
-                <li className="mr-5 mt-8">
-                  <Link to="#"></Link>
+                <li className="mr-5 mt-8 hover:text-slate-500 ease-in-out duration-300">
+                  <a href="https://github.com/tanvirgithub21">
+
                   <FaGithub />
+                  </a>
                 </li>
-                <li className="mr-5 mt-8">
-                  <Link to="#">
+                <li className="mr-5 mt-8 hover:text-slate-500 ease-in-out duration-300">
+                  <a href="https://www.facebook.com/tanviruniquebd/">
                     <FaFacebookSquare />
-                  </Link>
+                  </a>
                 </li>
-                <li className="mr-5 mt-8">
-                  <Link to="#">
+                <li className="mr-5 mt-8 hover:text-slate-500 ease-in-out duration-300">
+                  <a href="https://www.instagram.com/tan_vir_ahmed___/">
                     <FaInstagram />
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>

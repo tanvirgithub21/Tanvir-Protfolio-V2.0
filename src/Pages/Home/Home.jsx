@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
@@ -29,9 +30,9 @@ const Home = () => {
 
             </div>
 
-            <div className="buttonBox">
-              <button className="btn btn-primary">Download Resume</button>
-              <button className="btn btn-primary">Contact</button>
+            <div className="buttonBox mt-6">
+              <a href="Tanvir Ahmed_Resume.pdf" download={"Tanvir Resume"} className="btn btn-primary">Download Resume</a>
+              <Link to="/contact" className="btn btn-primary">Contact</Link>
             </div>
           </div>
         </div>

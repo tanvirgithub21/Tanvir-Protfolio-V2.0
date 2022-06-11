@@ -37,3 +37,6 @@ body{
   background-color: #007ced;
   color: white;
 }
+.is-active{
+  color: red;
+}

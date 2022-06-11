@@ -122,24 +122,25 @@ const Contact = () => {
 
               <div className="socialIcon flex justify-center items-center">
                 <ul className="flex justify-center sm:justify-start text-2xl text-gray-200">
-                  <li className="mr-5 mt-8">
-                    <Link to="#">
+                  <li className="mr-5 mt-8 hover:text-gray-400 ease-in-out duration-300">
+                    <a href="https://www.linkedin.com/in/tanvirahmed6174/">
                       <FaLinkedin />
-                    </Link>
+                    </a>
                   </li>
-                  <li className="mr-5 mt-8">
-                    <Link to="#"></Link>
-                    <FaGithub />
+                  <li className="mr-5 mt-8 hover:text-gray-400 ease-in-out duration-300">
+                    <a href="https://github.com/tanvirgithub21">
+                      <FaGithub />
+                    </a>
                   </li>
-                  <li className="mr-5 mt-8">
-                    <Link to="#">
+                  <li className="mr-5 mt-8 hover:text-gray-400 ease-in-out duration-300">
+                    <a href="https://www.facebook.com/tanviruniquebd/">
                       <FaFacebookSquare />
-                    </Link>
+                    </a>
                   </li>
-                  <li className="mr-5 mt-8">
-                    <Link to="#">
+                  <li className="mr-5 mt-8 hover:text-gray-400 ease-in-out duration-300">
+                    <a href="https://www.instagram.com/tan_vir_ahmed___/">
                       <FaInstagram />
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
