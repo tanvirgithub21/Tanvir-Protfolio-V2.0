@@ -1,4 +1,6 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import {
   FaLinkedin,
   FaGithub,
@@ -11,8 +13,29 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    const { name, email, messege } = data;
+    emailjs
+      .send(
+        "service_u2g2z97",
+        "template_phsfzic",
+        { name, email, messege },
+        "cy19EdVHUT7Htab4m"
+      )
+      .then((res) => {
+        res && toast.success("SEND MESSAGE");
+        reset();
+      })
+      .catch((err) => {
+        err && toast.error("SMUTTING WRONG");
+      });
+  };
+
   return (
     <div className="container">
       {/* section header about me  */}
@@ -24,7 +47,7 @@ const Contact = () => {
           <div className="w-[65%] contactUs  bg-[#FFFF] p-6">
             <h2 className="text-xl font-[500] mb-5">Send us a Massages</h2>
 
-            <div className="">
+            <form onSubmit={handleSubmit(onSubmit)} className="">
               <div class="">
                 <div>
                   <span class="uppercase text-sm text-gray-600 font-[500]">
@@ -33,7 +56,9 @@ const Contact = () => {
                   <input
                     class="w-full bg-gray-300 text-gray-900 mt-1 p-2 rounded-lg focus:outline-none focus:shadow-outline"
                     type="text"
-                    placeholder=""
+                    placeholder="Enter Your Full Name"
+                    {...register("name")}
+                    required
                   />
                 </div>
                 <div class="mt-2">
@@ -42,14 +67,20 @@ const Contact = () => {
                   </span>
                   <input
                     class="w-full bg-gray-300 text-gray-900 mt-1 p-2 rounded-lg focus:outline-none focus:shadow-outline"
-                    type="text"
+                    type="email"
+                    {...register("email")}
+                    required
                   />
                 </div>
                 <div class="mt-2">
                   <span class="uppercase text-sm text-gray-600 font-[500]">
                     Message
                   </span>
-                  <textarea class="w-full h-24 bg-gray-300 text-gray-900 mt-1 p-2 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                  <textarea
+                    required
+                    {...register("message")}
+                    class="w-full h-24 bg-gray-300 text-gray-900 mt-1 p-2 rounded-lg focus:outline-none focus:shadow-outline"
+                  ></textarea>
                 </div>
                 <div class="mt-2">
                   <button class="uppercase text-sm font-[500] tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
@@ -57,7 +88,7 @@ const Contact = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
           <div className="w-[35%] contactInfo bg-[#143d6c] p-4">
             <h4 className=" text-lg font-[500] text-slate-100 mb-5">
