@@ -7,6 +7,7 @@ import NavBar from './Pages/NavBar/NavBar';
 import Projects from './Pages/Projects/Projects';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Blog from './Pages/Blog/Blog';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<AboutMe />} />
         <Route path='/projects' element={<Projects />} />
+        <Route path='/blog' element={<Blog/>} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <ToastContainer />
