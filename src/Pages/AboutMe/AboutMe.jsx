@@ -10,10 +10,10 @@ import {
 
 const AboutMe = () => {
   return (
-    <section>
+    <section className="backgroundImg">
       <div className="container">
         {/* section header about me  */}
-        <h2 className="text-2xl text-center font-semibold my-7">
+        <h2 className="text-2xl text-center font-semibold py-7">
           <span className="text-emerald-400">About</span> Me
         </h2>
 

@@ -1,3 +1,9 @@
+
+
+.backgroundImg{
+    height: calc(100vh - 3rem);
+}
+
 .aboutMeImage{
     background-image: url(../../Images/aboutMe.jpg);
     background-size: cover;

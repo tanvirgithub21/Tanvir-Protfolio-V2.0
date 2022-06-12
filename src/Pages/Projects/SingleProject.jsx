@@ -1,20 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import project1 from "../../Images/project-1.png";
 
 const SingleProject = ({ singleData }) => {
-  const { fractures } = singleData;
-  console.log(singleData?.projLinks);
+  console.log(singleData);
 
   return (
     <div class=" w-full bg-white rounded-lg border border-gray-200 shadow-md mb-8 md:mb-0">
-      <img class="rounded-t-lg" src={project1} alt="img" />
+      <img class="rounded-t-lg" src={singleData?.projThumbnail} alt="img" />
       <div class="p-5">
         <h2 className="text-2xl font-[600]">{singleData?.projName}</h2>
         <h4 className="text-sm text-gray-500">{singleData?.projShortDric}</h4>
         <p className="mt-2 text-md text-gray-600">Features</p>
         <ul className="list-disc ml-[1.2rem] text-sm mt-1 text-gray-600">
-          {fractures?.map((singleFractures) => (
+          {singleData?.fractures?.map((singleFractures) => (
             <li>{singleFractures}</li>
           ))}
         </ul>
@@ -55,7 +53,7 @@ const SingleProject = ({ singleData }) => {
           )}
 
           <Link
-            to={`/projects/:${singleData?._id}`}
+            to={`/projects/${singleData?._id}`}
             className="px-2 py-1 mt-2 bg-amber-500 text-gray-100 text-[500] text-sm mr-2 rounded-md"
           >
             Details

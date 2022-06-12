@@ -26,7 +26,7 @@ const Projects = () => {
 
         <div className="projectsBox my-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-6 md:gap-10">
           {data.map((singleData) => (
-            <SingleProject key={singleData._id} singleData={singleData} />
+            <SingleProject key={singleData?._id} singleData={singleData} />
           ))}
         </div>
       </div>
